@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16 лют 2015, 12:19:50
+    Author     : OZV
+*/
+
+@mixin defibox
+(
+$bg_color: $inputBgColor, 
+$border_rad: $basicBorderRadius, 
+$border_width: 0,
+$border_color: inherit,
+$width: $input_width, 
+$shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.50)
+) 
+{
+    padding: $input_padding_all;
+    margin: $input_margin_all;
+    background-color: $bg_color;
+    border-radius: $border_rad;
+    border-width: $border_width;
+    border-color: $border_color;
+    border-style: solid;
+    width: $width;
+    box-shadow: $shadow;
+    @include box-sizing(border-box);
+}

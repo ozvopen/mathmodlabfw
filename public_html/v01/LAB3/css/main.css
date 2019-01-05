@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'pf_dindisplay_prolight';
+    src: url("../fonts/pfdindisplaypro-light.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin:0;
+    padding:0;
+    border:none;
+    border-radius: 15px;
+    font-family: 'pf_dindisplay_prolight', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+.clear{
+    clear: both;
+}
+h1{
+    font-weight: 600;
+    line-height: 35px;
+}
+html, body{
+    height: 100%;
+}
+body{
+    background:#15112a;	
+    color:#000; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: flex-end;
+    align-items: center;
+}
+.area{
+    width: 100%;
+}
+.content-left{
+    float:left;
+}
+.content-right{
+    float:right;
+}
+.inline-block{
+    display: inline-block;
+}
+form.input{
+    width: 300px;
+    margin: 15px auto;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);  
+    border-radius: 12px;  
+    background-color: #ededed;
+    padding: 30px;
+    /**/
+    order: 1;
+    flex: 0 1 auto;
+    align-self: stretch;
+}
+form.output{
+    margin: 0 1.5%;
+    min-width: 300px;
+    /**/
+    order: 2;
+    flex: 1 1 auto;
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: flex-end;
+    align-items: center;
+}
+.footer{
+    color: beige;
+    text-align: center;
+    margin:5px 0;
+    /**/
+    order: 3;
+    flex: 0 1 auto;
+    align-self: stretch;
+}
+section{
+    border: 1px gray;
+}
+section.input{
+
+}
+section.input dl{
+
+}
+section.input dl dd{
+    display: inline;
+}
+section.input dl dt{
+    display: inline-block;
+    width: 30px;
+    text-align: right;
+}
+input[type="submit"]#refreshBtn{
+    background-color: #7fff00;
+    width: 64px;
+    height: 64px;
+    font-size: 40px;
+    margin: 10px auto 0;
+    display: block;
+    cursor: pointer;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.50); 
+
+}
+input[type="submit"]#refreshBtn:hover{
+    background-color: #73e500;
+    transition-timing-function: ease;
+    transition-duration: 0.25s;
+}
+input[type="submit"]#refreshBtn:not(:hover){
+    background-color: #7fff00;
+    transition-timing-function: ease;
+    transition-duration: 0.50s;
+}
+input[type="submit"]#refreshBtn:active{
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    box-shadow:0px 0px 1px 0px rgba(0, 0, 0, 0.50), inset 0px 0px 1px 0px rgba(0, 0, 0, 0.50);
+}
+input.SetValues{
+    width: 160px;
+}
+input.SetValues, #outputScrWrp, label.statement{
+    padding: 6px 10px;
+    margin: 6px 0;
+    box-shadow:inset 0px 1px 5px 0px rgba(0, 0, 0, 0.50); 
+    background-color: white;
+}
+input.SetValues:hover{
+    box-shadow:inset 0px 1px 5px 0px rgba(17, 150, 199, 0.75);  
+    transition-timing-function: ease;
+    transition-duration: 0.2s;
+}
+input.SetValues:not(:hover){
+    box-shadow:inset 0px 1px 5px 0px rgba(0, 0, 0, 0.50);  
+    transition-timing-function: ease;
+    transition-duration: 0.2s;
+}
+input.SetValues:focus{
+    box-shadow:inset 0px 0px 0px 0px rgba(0, 0, 0, 0.0), 0px 0px 10px 0px rgba(17, 150, 199, 0.75);
+    transition-timing-function: ease;
+    transition-duration: 0.25s;
+}
+form.output h1{
+    background-color: beige;
+    border-top-left-radius: 20px 50px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 20px 50px;
+    margin-left: 96px;
+    line-height: 36px;
+    padding: 0 20px;
+    margin-bottom: -5px;
+    position: relative;
+    z-index: 1;
+    border-bottom: solid white 5px;
+    display: inline-block;
+    box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.50);
+    /**/
+    order: 1;
+    flex: 0 1 auto;
+    align-self: baseline;
+}
+form.output section#outputScrWrp{
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding:0;
+    /**/
+    order: 2;
+    flex: 1 1 auto;
+    align-self: stretch;
+}
+#outputScr{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    resize: none;
+    box-sizing: border-box;
+    box-shadow:inset 0px 0px 10px 0px rgba(0, 0, 0, 0.50);
+}
+form.input label.statement{
+    border-radius:5px;
+    margin: 10px;
+    display: inline-block;
+    background-color: beige;
+}
+form.input label.statement *{
+    font-family: Cambria Math;
+    line-height: 30px;
+}
+.header h1.first{
+    margin-top: -10px;
+}
+.footer h1{
+    font-weight: 400;
+}

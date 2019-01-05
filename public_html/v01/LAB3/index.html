@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LAB#3 | OZV MatMod Labs Framework 2014</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width">
+        <link href="css/main.css" rel="stylesheet">
+        <script type="text/javascript" src="js/MatModLab_N3.js"></script>
+    </head>
+    <body>
+        <form class="input" id="frame1">
+            <section class="header">
+                <h1 class="first">Approximate solving of nonlinear equations</h1>
+                <h1 class="inline-block">Statement</h1>
+                <label class="statement">f(x) = 2e<sup>-x<sup>2</sup></sup>-3x+4</label>
+            </section>
+            <section class="input" id="inputSect">
+                <h1>Arguments required:</h1>
+                <dl>
+                    <dt>
+                    <label>Density</label>
+                    </dt>
+                    <dd><br>
+                        <input type="text" class="SetValues" value="1" name="accuracy">
+                    </dd>
+                </dl>
+                <input type="submit" id="refreshBtn" value="&#8635;">
+                <div class="clear"></div>
+            </section>
+        </form>
+        <form class="output">
+            <h1>Output</h1>
+            <section id="outputScrWrp" class="outputScr">
+                <textarea readonly id="outputScr"></textarea>
+            </section>
+        </form>
+        <div class="footer">
+            <h1>2014 OZV MatModLab Framework v. 0.1.4 beta, script version: <span id="scriptVer"></span></h1>
+        </div>
+    </body>
+</html>

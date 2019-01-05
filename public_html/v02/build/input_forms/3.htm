@@ -1,0 +1,53 @@
+<form id="MML_InputForm" class="input-form" action=""> 
+    <section id="MML_InputForm_Heading" class="heading">
+        <h3 class="header"  id="MML_InputForm_Heading_Header">
+            <span class="text" id="MML_InputForm_Heading_Header_Text">Лабораторна робота №3</span>
+        </h3>
+        <div class="statement">
+            <h3 class="header">
+                <span class="text" id="MML_InputForm_Heading_Statement_Text">Завдання:</span>
+            </h3>
+            <div class="expression">
+                <mark class="for-default-styling">
+                    <span class="text">f(x) = 2e<sup>-x<sup>2</sup></sup>-3x+4</span>
+                </mark>
+            </div>
+        </div>
+    </section> 
+    <section id="MML_InputForm_UserInput" class="user-input">
+        <h3 class="header">
+            <span class="text" id="MML_InputForm_UserInput_Header_Text">Параметри розрахунку:</span>
+        </h3>
+        <dl class="argument">
+            <dt>
+            <label class="hypothetic">Scope</label>
+            </dt>
+            <dd>
+                <input class="numeric" type="text" value="200" name="scope">
+            </dd>
+        </dl>
+        <dl class="argument">
+            <dt>
+            <label class="hypothetic">Use method</label>
+            </dt>
+            <dd class="input-wrap">
+                <select name="method_num">
+                    <option value="1">Approximating</option>
+                    <option value="2">Combined</option>
+                    <option value="3">Primitive iterations</option>
+                </select>
+            </dd>
+        </dl>
+        <dl id="MML_InputForm_UserInput_si_precision_block" class="argument">
+            <dt>
+            <label class="hypothetic">Precision</label>
+            </dt>
+            <dd>
+                <input class="numeric" type="text" value="1" name="precision">
+            </dd>
+        </dl>
+        <button id="MML_InputForm_UserInput_RefreshBtn" class="play-btn" name="PlayBtn" disabled="disabled">
+            <span class="text special-symbol play">&#9658;</span>
+        </button>
+    </section>
+</form>

@@ -1,0 +1,36 @@
+/*
+   The flex_flags.scss uses "compass/css3/flexbox" library.
+   It allows to define all flexible parent or flexible child (or borh) properties as single line function.
+*/
+/* 
+    Created on : Dec 10 2014, 14:34:27
+    Author     : OZV
+*/
+@import "compass/css3/flexbox";
+
+@mixin flex-parent($flex_type: intial, $flex_direction: initial, $flex_wrap: initial, $align_items: initial, $justify_content: initial, $align_content: initial)
+{
+    @include display-flex($flex_type);
+    @include flex-direction($flex_direction);
+    @include flex-wrap($flex_wrap);
+    @include align-items($align_items);
+    @include justify-content($justify_content);
+    @include align-content($align_content);
+}
+
+@mixin flex-child($flex_order: initial, $flex_grow: initial, $flex_shrink: initial, $flex_basis: initial, $flex_align_self: initial)
+{
+    @include order($flex_order);
+    @if (($flex_grow != initial) and ($flex_shrink != initial) and ($flex_basis != initial))
+    {
+        @include flex($flex_grow $flex_shrink $flex_basis);
+    }
+    //As css flex() function rejects "initial" value, it should be expanded
+    @else
+    {
+        @include flex-grow($flex_grow);//initial
+        @include flex-shrink($flex_shrink);//initial
+        @include flex-basis($flex_basis); //initial
+    }
+    @include align-self($flex_align_self);
+}

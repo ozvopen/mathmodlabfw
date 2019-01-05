@@ -1,0 +1,77 @@
+$basicFontSize: 14px;
+$basicFontColor: black;
+$secondaryFontColor: white;
+$mainBgColor: #15112a;
+$basicBorderRadius: 12px;
+$inputBgColor: white;
+$input_padding_vert: 6px;
+$input_padding_horiz: 10px;
+$input_padding_all: $input_padding_vert $input_padding_horiz;
+$input_margin_vert: 6px;
+$input_margin_horiz: 10px;
+$input_margin_all: $input_margin_vert $input_margin_horiz;
+$input_width: 128px;
+$select_overlap: 20px;
+$semi_transparent_bg: rgba(0, 0, 0, 0.75);
+
+//InputForm
+$InputForm_padding_all: 30px;
+$InputForm_margin_top: 15px;
+$InputForm_margin_bottom: $InputForm_margin_top;
+$InputForm_margin_left: $InputForm_margin_top;
+$InputForm_margin_right: $InputForm_margin_left;
+$InputForm_margin_all: $InputForm_margin_top $InputForm_margin_right $InputForm_margin_bottom $InputForm_margin_left;
+$InputForm_background_color: rgba(255, 255, 255, 0.5);
+$InputForm_min_height: 64px;
+$InputForm_statement_expression_input_min_width: 48px;
+$InputForm_statement_expression_input_bg_color: white;
+$InputForm_statement_expression_input_border_width: 1px;
+$InputForm_statement_expression_input_border_color: grey;
+$InputForm_statement_expression_border_radius: $basicBorderRadius / 2;
+$InputForm_statement_expression_bg_color: beige;
+$InputForm_statement_expression_max_width: 416px;
+//InputForm > user-input > play-btn
+$InputForm_userInput_playBtn_max_height: 64px;
+$InputForm_userInput_playBtn_max_width: $InputForm_userInput_playBtn_max_height;
+$InputForm_userInput_playBtn_bg_color: #7fff00;
+$InputForm_userInput_playBtn_margin_top: 10px;
+$InputForm_userInput_playBtn_margin_bottom: 0;
+$InputForm_userInput_playBtn_margin_left: auto;
+$InputForm_userInput_playBtn_margin_right: $InputForm_userInput_playBtn_margin_left;
+$InputForm_userInput_playBtn_margin_all: $InputForm_userInput_playBtn_margin_top $InputForm_userInput_playBtn_margin_right $InputForm_userInput_playBtn_margin_bottom $InputForm_userInput_playBtn_margin_left;
+$InputForm_userInput_playBtn_padding_all: $basicFontSize;
+$InputForm_userInput_playBtn_font_color: #333;
+$InputForm_userInput_playBtn_font_size: 1.4 * $basicFontSize;
+$InputForm_userInput_playBtn_shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.50);
+$InputForm_userInput_playBtn_text_shadow: #fff 0px 1px 0, #000 0 -1px 0;
+
+$OutputForm_header_bg_color: $semi_transparent_bg;
+$OutputForm_header_font_color: $secondaryFontColor;
+$OutputForm_header_padding_all: $basicFontSize;
+
+$basicLineHeight: 1.4 * $basicFontSize;
+
+$footer_text_color: $secondaryFontColor;
+$footer_padding_left: 10px;
+$footer_padding_right: $footer_padding_left;
+$footer_padding_top: $footer_padding_left;
+$footer_padding_bottom: $footer_padding_left;
+$footer_padding_vert: $footer_padding_top + $footer_padding_bottom;
+$footer_padding_horiz: $footer_padding_left + $footer_padding_right;
+$footer_padding_full: $footer_padding_top $footer_padding_right $footer_padding_bottom $footer_padding_left;
+$footer_background_color: $semi_transparent_bg;
+
+$blur_radius: 16px;
+
+$page_min_height: 128px;
+
+$bg_image_url: "../images/3.jpg";
+
+$header_text_font_weight: 600;
+$header_text_font_size: 1.17 * $basicFontSize;
+
+$outputScreen_min_height: 384px;
+
+
+//Imported classes selectors
+$Imports_Site_bg_class: site-bg;

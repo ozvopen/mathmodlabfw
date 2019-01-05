@@ -1,0 +1,155 @@
+html, body {
+    height: 100%;
+}
+body {
+    font-family: "pf_dindisplay_prolight", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: $basicFontColor;
+
+    &.#{$Imports_Site_bg_class}{
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+//Show stylesheet version in document
+.verinfo:after {
+    content: " Stylesheet version: " + $VERSION;
+}
+#lab_selection {
+    position: absolute;
+    top: 36px;
+    left: 36px;
+}
+h1 {
+    font-weight: 600;
+    line-height: 35px;
+}
+.input-form.spot {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    border-radius: $basicBorderRadius;
+    margin: $InputForm_margin_all;
+    @include flex-child(1, 0, 0, auto, center);
+    min-height: $InputForm_min_height;
+
+    .input-form {
+        padding: $InputForm_padding_all;
+        background-color: $InputForm_background_color;
+        border-radius: $basicBorderRadius;
+
+        .statement {
+            .expression {
+                @include defibox($InputForm_statement_expression_bg_color, $InputForm_statement_expression_border_radius, 0, inherit, auto);
+                margin: 10px;
+                display: inline-block;
+                max-width: $InputForm_statement_expression_max_width;
+                box-sizing: content-box;
+
+                input[type="text"] {
+                    @include defibox(
+                    $InputForm_statement_expression_input_bg_color, 
+                    $InputForm_statement_expression_border_radius, 
+                    $InputForm_statement_expression_input_border_width, 
+                    $InputForm_statement_expression_input_border_color, 
+                    $InputForm_statement_expression_input_min_width, 
+                    none
+                    );
+                }
+            }
+        }
+
+        .user-input {
+            .argument {
+                input[type="text"] {
+                    @include defibox();
+                }
+                //When selector used
+                .input-wrap {
+                    @include defibox();
+                    overflow: hidden;
+                    width: $input_width;
+
+                    select {
+                        width: $input_width + $select_overlap;
+                        background: rgba(0, 0, 0, 0);
+                    }
+                }
+            }
+            .play-btn {
+                background-color: $InputForm_userInput_playBtn_bg_color;
+                max-width: $InputForm_userInput_playBtn_max_width;
+                max-height: $InputForm_userInput_playBtn_max_height;
+                //font-size: 40px;
+                margin: $InputForm_userInput_playBtn_margin_all;
+                display: block;
+                cursor: pointer;
+                box-shadow: $InputForm_userInput_playBtn_shadow;
+                border-radius: $basicBorderRadius;
+                padding: $InputForm_userInput_playBtn_padding_all;
+                color: $InputForm_userInput_playBtn_font_color;
+                font-size: $InputForm_userInput_playBtn_font_size;
+
+                .text {
+                    text-shadow: $InputForm_userInput_playBtn_text_shadow;
+                }
+            }
+        }
+    }
+}
+.output-form {
+    @include flex-parent(flex, column, nowrap, stretch, space-between, center);
+    @include flex-child(2, 1, 1, auto, stretch);
+    min-height: $outputScreen_min_height;
+
+    .screen {
+        width: 100%;
+        @include flex-child(1, 1, 1, auto, stretch);
+    }
+
+    .header {
+        color: $OutputForm_header_font_color;
+        background-color: $OutputForm_header_bg_color;
+        padding: $OutputForm_header_padding_all;
+        align-self: flex-start;
+
+        .text {
+            font-weight: 400;
+        }
+    }
+}
+#page_footer {
+    color: $footer_text_color;
+    text-align: center;
+    background-color: $footer_background_color;
+    padding: $footer_padding_full;
+    @include flex-child(3, 0, 0, auto, auto);
+}
+.header .text {
+    font-weight: $header_text_font_weight;
+    font-size: $header_text_font_size;
+}
+#Labselection_Labswitch{
+    max-width: 220px;
+    background: rgba(0,0,0,0);
+    font-weight: 600;
+    font-size: 16.38px;
+    font-family: "pf_dindisplay_prolight", sans-serif;
+    color: $basicFontColor;
+    margin-bottom:10px
+}
+#MML_InputForm_Heading_Header{
+    text-align: left;
+}
+
+//As some content is fitted using table
+table > tr + tr {
+    margin-left: 20px;
+}
+dl.argument{
+    text-align: right;
+
+    dt, dd {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

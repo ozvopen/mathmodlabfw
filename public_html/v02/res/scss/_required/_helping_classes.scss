@@ -1,0 +1,10 @@
+.clear{
+    clear: both;
+}
+.flex {
+    height: 100%;
+    @include flex-parent(flex, column, nowrap, stretch, flex-start, center);
+}
+.hidden {
+    display: none;
+}

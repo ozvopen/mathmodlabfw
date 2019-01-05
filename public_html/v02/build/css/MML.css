@@ -1,0 +1,308 @@
+@charset "UTF-8";
+/**
+ * MML.css: MatModLab framework stylesheet
+ */
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 ÐüÐûÐç 2015, 11:22:05
+    Author     : OZV
+*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+mark {
+  background: none; }
+
+@font-face {
+  font-family: 'pf_dindisplay_prolight';
+  src: url("../fonts/pfdindisplaypro-light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/*
+(!) Not working now.
+This module should define content replacement for each span with appropriate className.
+*/
+/* 
+    Created on : 26 ÐüÐûÐç 2015, 13:12:09
+    Author     : OZV
+*/
+span.special-symbol.middot, span.special-symbol.multiply {
+  content: "&middot;"; }
+
+span.special-symbol.play {
+  content: "&#9658;"; }
+
+span.special-symbol.phi {
+  content: "&phi;"; }
+
+span.special-symbol.Phi {
+  content: "&Phi;"; }
+
+/*
+   The flex_flags.scss uses "compass/css3/flexbox" library.
+   It allows to define all flexible parent or flexible child (or borh) properties as single line function.
+*/
+/* 
+    Created on : Dec 10 2014, 14:34:27
+    Author     : OZV
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16 ð╗ÐÄÐé 2015, 12:19:50
+    Author     : OZV
+*/
+.clear {
+  clear: both; }
+
+.flex {
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  align-content: center; }
+
+.hidden {
+  display: none; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: "pf_dindisplay_prolight", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: black; }
+  body.site-bg {
+    background-size: cover;
+    background-repeat: no-repeat; }
+
+.verinfo:after {
+  content: " Stylesheet version:  0.5.02"; }
+
+#lab_selection {
+  position: absolute;
+  top: 36px;
+  left: 36px; }
+
+h1 {
+  font-weight: 600;
+  line-height: 35px; }
+
+.input-form.spot {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 12px;
+  margin: 15px 15px 15px 15px;
+  -webkit-order: 1;
+  order: 1;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: center;
+  align-self: center;
+  min-height: 64px; }
+  .input-form.spot .input-form {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px; }
+    .input-form.spot .input-form .statement .expression {
+      padding: 6px 10px;
+      margin: 6px 10px;
+      background-color: beige;
+      border-radius: 6px;
+      border-width: 0;
+      border-color: inherit;
+      border-style: solid;
+      width: auto;
+      box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 10px;
+      display: inline-block;
+      max-width: 416px;
+      box-sizing: content-box; }
+      .input-form.spot .input-form .statement .expression input[type="text"] {
+        padding: 6px 10px;
+        margin: 6px 10px;
+        background-color: white;
+        border-radius: 6px;
+        border-width: 1px;
+        border-color: grey;
+        border-style: solid;
+        width: 48px;
+        box-shadow: none;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; }
+    .input-form.spot .input-form .user-input .argument input[type="text"] {
+      padding: 6px 10px;
+      margin: 6px 10px;
+      background-color: white;
+      border-radius: 12px;
+      border-width: 0;
+      border-color: inherit;
+      border-style: solid;
+      width: 128px;
+      box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+    .input-form.spot .input-form .user-input .argument .input-wrap {
+      padding: 6px 10px;
+      margin: 6px 10px;
+      background-color: white;
+      border-radius: 12px;
+      border-width: 0;
+      border-color: inherit;
+      border-style: solid;
+      width: 128px;
+      box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      overflow: hidden;
+      width: 128px; }
+      .input-form.spot .input-form .user-input .argument .input-wrap select {
+        width: 148px;
+        background: transparent; }
+    .input-form.spot .input-form .user-input .play-btn {
+      background-color: #7fff00;
+      max-width: 64px;
+      max-height: 64px;
+      margin: 10px auto 0 auto;
+      display: block;
+      cursor: pointer;
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      padding: 14px;
+      color: #333;
+      font-size: 19.6px; }
+      .input-form.spot .input-form .user-input .play-btn .text {
+        text-shadow: #fff 0px 1px 0, #000 0 -1px 0; }
+
+.output-form {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-content: center;
+  align-content: center;
+  -webkit-order: 2;
+  order: 2;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-self: stretch;
+  align-self: stretch;
+  min-height: 384px; }
+  .output-form .screen {
+    width: 100%;
+    -webkit-order: 1;
+    order: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: stretch;
+    align-self: stretch; }
+  .output-form .header {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 14px;
+    align-self: flex-start; }
+    .output-form .header .text {
+      font-weight: 400; }
+
+#page_footer {
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 10px 10px 10px 10px;
+  -webkit-order: 3;
+  order: 3;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: auto;
+  align-self: auto; }
+
+.header .text {
+  font-weight: 600;
+  font-size: 16.38px; }
+
+#Labselection_Labswitch {
+  max-width: 220px;
+  background: transparent;
+  font-weight: 600;
+  font-size: 16.38px;
+  font-family: "pf_dindisplay_prolight", sans-serif;
+  color: black;
+  margin-bottom: 10px; }
+
+#MML_InputForm_Heading_Header {
+  text-align: left; }
+
+table > tr + tr {
+  margin-left: 20px; }
+
+dl.argument {
+  text-align: right; }
+  dl.argument dt, dl.argument dd {
+    display: inline-block;
+    vertical-align: middle; }
+
+.site-bg {
+  background: url("../images/3.jpg") no-repeat; }
+
+#MML_InputForm_spot {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 0; }
+  #MML_InputForm_spot:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/3.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-filter: blur(16px);
+    -webkit-filter: blur(16px);
+    -ms-filter: "progid:DXImageTransform.Microsoft.blur(pixelRadius=5, enabled=" true ")";
+    filter: progid:DXImageTransform.Microsoft.blur(pixelRadius=5, enabled="true");
+    filter: blur(16px); }
+
+@media screen and (max-height: 128px) {
+  #MML_InputForm_spot:before {
+    background: transparent; } }
+
+/*# sourceMappingURL=MML.css.map */

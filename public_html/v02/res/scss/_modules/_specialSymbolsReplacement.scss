@@ -1,0 +1,21 @@
+/*
+(!) Not working now.
+This module should define content replacement for each span with appropriate className.
+*/
+/* 
+    Created on : 26 січ 2015, 13:12:09
+    Author     : OZV
+*/
+
+span.special-symbol.middot, span.special-symbol.multiply {
+    content: "&middot;";
+}
+span.special-symbol.play {
+    content: "&#9658;";
+}
+span.special-symbol.phi {
+    content: "&phi;";
+}
+span.special-symbol.Phi {
+    content: "&Phi;";
+}

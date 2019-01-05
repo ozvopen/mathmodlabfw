@@ -1,0 +1,41 @@
+$site_bg_selector: $Imports_Site_bg_class;
+
+.#{$site_bg_selector} {
+    background: url($bg_image_url) no-repeat;
+}
+
+#MML_InputForm_spot {
+    @include box-sizing(border-box);
+    width: auto;
+    height: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 0;
+
+    &:before
+        {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url($bg_image_url);
+        background-attachment: fixed;
+        background-size: cover;
+        -moz-filter: blur($blur_radius);
+        -webkit-filter: blur($blur_radius);
+        -ms-filter: "progid:DXImageTransform.Microsoft.blur(pixelRadius=5, enabled="true")";
+        filter: progid:DXImageTransform.Microsoft.blur(pixelRadius=5, enabled="true");
+        filter: blur($blur_radius);
+    }
+}
+
+@media screen and (max-height: $page_min_height) {
+    #MML_InputForm_spot:before {
+        background: rgba(0, 0, 0, 0);
+    }
+}
