@@ -141,7 +141,7 @@ MML = MatModLab = {
             //This is what function do
             //
             set_input_form_titles();
-            
+
             append_lab_switching();
             if (!MML.res.switchHeadingValueRemoved)
                 remove_switch_heading();
@@ -260,7 +260,9 @@ MML = MatModLab = {
             {
                 MML.lib.load_module(requested_lab_num);
                 MML.res.lab_switch.value = requested_lab_num;
-            }
+                return true
+            } else
+                return false;
         },
         parseFloat: function (string) {
             var result = parseFloat(string.replace(/[^\d.-]/g, ''));
@@ -641,13 +643,22 @@ MML = MatModLab = {
             //Version information insert
             for (var i = 0; i < MML.res.verinfo.length; i++)
                 MML.res.verinfo[i].appendChild(new MML.lib.VerinfoHTMLElem());
-            //Allows to request lab preloading using URL string
-            MML.lib.check_preload_request();
-            //Set document texts
-            document.getElementById('Labselection_Labswitch').options[0].text = 'Choose module to run';
-            document.getElementById('Labselection_Labswitch').options[1].text = MML.modules[0].INFO_NZ.TITLE;
-            document.getElementById('Labselection_Labswitch').options[2].text = MML.modules[1].INFO_NZ.TITLE;
-            document.getElementById('Labselection_Labswitch').options[3].text = MML.modules[2].INFO_NZ.TITLE;
+
+            //Allows to request lab preloading using URL GET
+            // and controls lab secect
+            if (MML.lib.check_preload_request()) {
+                document.getElementById('Labselection_Labswitch').options[0].text = MML.modules[0].INFO_NZ.TITLE;
+                document.getElementById('Labselection_Labswitch').options[1].text = MML.modules[1].INFO_NZ.TITLE;
+                document.getElementById('Labselection_Labswitch').options[2].text = MML.modules[2].INFO_NZ.TITLE;
+            } else {
+                document.getElementById('Labselection_Labswitch').options[0].text = 'Choose module to run';
+                document.getElementById('Labselection_Labswitch').options[1].text = MML.modules[0].INFO_NZ.TITLE;
+                document.getElementById('Labselection_Labswitch').options[2].text = MML.modules[1].INFO_NZ.TITLE;
+                document.getElementById('Labselection_Labswitch').options[3].text = MML.modules[2].INFO_NZ.TITLE;
+            }
+            ;
+
+
         };
     }
 };
